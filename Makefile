@@ -23,6 +23,7 @@ DEPENDS := $(OBJECTS:%.o=%.d)
 
 # default
 $(TARGET) : $(OBJECTS)
+	@mkdir -p bin/
 	@echo " $(CXX) $^ -o $(TARGET)"; $(CXX) $^ -o $(TARGET)
 
 -include $(DEPENDS)
